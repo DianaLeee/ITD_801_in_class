@@ -1,13 +1,71 @@
+<!--
+font-family
+em은 font-size에 사용. 웹 문서에서 사용되는 단위로, 컴퓨터 외 모바일 등
+다른 장치에서도 크기 조정이 가능함. em쓰는 것을 권장
+
+color
+폰트 컬러를 의미함
+
+css selectors
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors
+
+direct child일때만 적용을 받는다(맞나요?)
+
+# ->id를 의미
+
+id는 중요하다. 모든것을 override할 수도 있기 때문에
+css specificity - 점수 매겨서 큰 비율을 가진게 우선하게 된다?
+
+li, ul이 selector로 많이 쓰이는이유? -> 대부분 navigation이 있으니까
+
+<css box model>
+increase font size == increase content area
+declare 한게 real box size가 아닐수도 있다는게 tricky...
+
+box margin size 어디서와? -> default browser
+ex1)
+b=0
+m=2
+c=5
+일때 width=12px로 지정하면 box크기 변하는게 있을까? -> NO! box-size=12px
+
+ex2)
+width = 12
+border-size = 3
+box size => 15px
+
+width지정하면 box사이즈가 몇인지 math 해야한다.
+따라서 box-sizing=20px
+하지만 c=5, 위쪽 m=(20-5)/2, 아래쪽 m=15/2가 된다. ㅇㅇ 헷갈림
+
+
+width: 340px; ->content 부분의 width가 340px이 된다
+height: 200px; ->content 부분의 height가 200px이 된다
+padding: 20px; -> 맨 밖의 padding이 20
+border: 10px solid red; -> border가 10
+margin: 30px; ->margin이 30
+순으로 바꾸게 되면 어떻게 될까요?
+
+따라서... 총 길이280, 총 너비400
+30
+10
+20
+340*200
+20
+10
+30
+-->
+
 <!DOCTYPE html>
 
 <html>
 <head>
     <title>Page Title</title>
+  <link rel="stylesheet" type="text/css" href="170215_webdev.css">
 </head>
 
 <body>
-
-
-
+  <div id="box1">Hello world!</div>
+  <p>what's up!</p>
 </body>
 </html>

@@ -1,0 +1,10 @@
+#box1  { /* #은 id를 의미 */
+    background-color: #888888;
+    padding: 30px;
+    border: 10px dashed red;
+    font-size: 30px;
+}
+p + h2 { /* pseudo code*/
+    font-family: Courier New;
+    font-size: 20px;
+}
